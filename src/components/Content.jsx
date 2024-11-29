@@ -32,47 +32,80 @@ const Content = () => {
             readable content of a page when looking at its layout. The point of
             using Lorem Ipsum is that it has a more
           </p>
-          <button className="button">Get started</button>
+          <button className="button" style={{ backgroundColor: '#86d8c6', color: 'white' }}>Get started</button>
         </div>
       </section>
 
-      <div className="ca">
-      <h1>How Can I Help ?</h1>
-      <h2>Crafting Brand Triumph</h2>
-      <h2>Through UI/UX Design</h2>
-      <div className="cards">
-        <div className="card">
-          <div className="circle" />
-          <h3>Judul Section</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas
-            porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies,
-            purus lectus malesuada libero, sit amet commodo magna eros quis
-            urna.
-          </p>
+                <div className="ca" style={{ backgroundColor: '#A9A9A9' }}>
+                  <h2>How Can I Help?</h2>
+                  <div style={{ 
+                    
+                  
+                  }}>
+                    <h1 style={{ 
+            fontSize: '3em', 
+            fontWeight: 'bold', 
+            marginTop: '10px', 
+            color: '#333',
+            textAlign   : 'left',
+            width: '400%',
+            marginBottom: '0',
+            position: 'relative', // memungkinkan pergeseran
+            left: '-150px', // geser horizontal
+            fontFamily: 'Garamond, sans-serif', // gunakan font yang diinginkan
+          }}>
+            Crafting Brand Triumph
+          </h1>
+
+          <h3 style={{ 
+            fontSize: '3em', 
+            fontWeight: 'bold', 
+            marginTop: '10px', 
+            color: '#333',
+            textAlign: 'right',
+            width: '100%',
+            marginBottom: '0',
+            position: 'relative', // memungkinkan pergeseran
+            right: '-150px', // geser horizontal
+            fontFamily: 'Times, sans-serif', // gunakan font yang diinginkan
+          }}>
+            Through UI/UX Design
+          </h3>
         </div>
-        <div className="card">
-          <div className="circle" />
-          <h3>Judul Section</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas
-            porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies,
-            purus lectus malesuada libero, sit amet commodo magna eros quis
-            urna.
-          </p>
-        </div>
-        <div className="card">
-          <div className="circle" />
-          <h3>Judul Section</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas
-            porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies,
-            purus lectus malesuada libero, sit amet commodo magna eros quis
-            urna.
-          </p>
+        {/* no 2 */}
+        <div className="cards">
+          <div className="card">
+            <div className="circle" />
+            <h3>Judul Section</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas
+              porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies,
+              purus lectus malesuada libero, sit amet commodo magna eros quis
+              urna.
+            </p>
+          </div>
+          <div className="card">
+            <div className="circle" />
+            <h3>Judul Section</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas
+              porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies,
+              purus lectus malesuada libero, sit amet commodo magna eros quis
+              urna.
+            </p>
+          </div>
+          <div className="card">
+            <div className="circle" />
+            <h3>Judul Section</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas
+              porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies,
+              purus lectus malesuada libero, sit amet commodo magna eros quis
+              urna.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
 
       {/* Services Section */}
       <section style={{ textAlign: 'center', background: '#e9ecef', padding: '40px 0', margin: '20px 0' }}>
