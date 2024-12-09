@@ -1,7 +1,27 @@
-import React from 'react';
+ 
+import React, { useEffect, useState } from 'react';
 import '../App.css';
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 50) { // Menentukan kapan navbar mulai transparan
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup event listener when component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <nav className="navbar" style={{ 
       background: '#8cb2d8',
@@ -13,7 +33,8 @@ const Navbar = () => {
       <div className="navbar-brand" style={{ 
         borderRadius: '9px',
         padding: '10px',
-        transition: 'all 0.3s ease'
+        transition: 'all 0.3s ease',
+        marginTop: '-17px'
       }}>
         <img src="/favicon.png" alt="Online School Logo" className="logo" />
       </div>
@@ -28,14 +49,16 @@ const Navbar = () => {
           listStyle: 'none',
           fontWeight: '500'
         }}>
-          <li><a href="#home">Beranda</a></li>
-          <li><a href="#services">Layanan</a></li>
-          <li><a href="#about">Tentang</a></li>
-          <li><a href="#contact">Kontak</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Service</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact Us</a></li>
         </ul>
       </div>
       <div className="login-link">
-        <a href="#login">Masuk</a>
+        <a href="#login" className="btn-login">
+          Log In
+        </a>
       </div>
     </nav>
   );
